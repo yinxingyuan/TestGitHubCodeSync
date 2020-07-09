@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>1.0.00001</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9431874-01EE-4D16-A403-4B6B0C530327}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestGithubCodeSync.Services.Tests</RootNamespace>
+    <AssemblyName>TestGithubCodeSync.Services.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Core">
+      <HintPath>..\CommonLib\Common.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+
+    <Compile Include="Common\CommonServiceTest.cs" />
+
+    <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="ProductServiceTest.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+
+    <ProjectReference Include="..\TestGithubCodeSync.Services\TestGithubCodeSync.Services.csproj">
+      <Project>{388CD188-C98C-4BD3-A2EC-7B448F1A42D7}</Project>
+      <Name>TestGithubCodeSync.Services</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestGithubCodeSync.Services.Interfaces\TestGithubCodeSync.Services.Interfaces.csproj">
+      <Project>{4FD2C994-F3E6-405A-AE7D-2025036021BE}</Project>
+      <Name>TestGithubCodeSync.Services.Interfaces</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestGithubCodeSync.Entities\TestGithubCodeSync.Entities.csproj">
+      <Project>{5652F18B-C443-4578-B417-881B67E77874}</Project>
+      <Name>TestGithubCodeSync.Entities</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestGithubCodeSync.TestData\TestGithubCodeSync.TestData.csproj">
+      <Project>{3B49F00F-ECC3-469A-9028-5F4AB910058D}</Project>
+      <Name>TestGithubCodeSync.TestData</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestGithubCodeSync.Daos.Mocks\TestGithubCodeSync.Daos.Mocks.csproj">
+      <Project>{470D06A3-79F3-444B-923C-18C98CBBDC9C}</Project>
+      <Name>TestGithubCodeSync.Daos.Mocks</Name>
+    </ProjectReference>
+
+  </ItemGroup>
+ <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
