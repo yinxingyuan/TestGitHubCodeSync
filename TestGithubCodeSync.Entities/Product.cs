@@ -11,7 +11,8 @@ namespace TestGithubCodeSync.Entities
 	public class Product : MetaShare.Common.Core.Entities.Common
 	{
 	/*add customized code between this region*/
-
+	[DataMember]
+        public string Name {get;set}
 	/*add customized code between this region*/
 	}
 }
